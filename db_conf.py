@@ -13,6 +13,6 @@ engine = create_engine(
     SQLALCHEMY_DATABASE_URL,
 )
 
-db_session = scoped_session(sessionmaker(bind=engine))
+db_session = scoped_session(sessionmaker(bind=engine, autocommit=False, autoflush=False))
 
-Base = declarative_base()
+Base = declarative_base(),
