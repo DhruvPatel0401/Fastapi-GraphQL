@@ -12,4 +12,4 @@ class Post(Base):
     author = Column(String)
     content = Column(String)
     time_created = Column(DateTime(timezone=True), server_default=func.now())
-
+    
